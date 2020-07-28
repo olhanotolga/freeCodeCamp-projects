@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Palindrome Checker</h1>
+        <h2>In girum imus nocte et consumimur igni</h2>
+    </header>
+
+    <div class="additional-div-1"></div>
+    
+    <main>
+        <section class="section1">
+            <label for="palindrome-input">Type or insert your phrase here:</label>
+            <input type="text" name="potential-palindrome" id="palindrome-input">
+            <button type="button" onclick="palindrome(inputField.value)">Check it!</button>
+        </section>
+        <section class="section2">
+            <p><span class="palindrome-to-check"></span> <span class="is">is</span> <span class="not">not</span> a palindrome</p>
+        </section>
+        <section class="section3">
+            <dl>
+                <dt>Palindrome <span class="transcription">\ˈpa-lən-ˌdrōm\</span>:</dt>
+                <dd>a word, verse, or sentence or a number that reads the same backward or forward.</dd>
+                <dd>&mdash;<a href="https://www.merriam-webster.com/dictionary/palindrome" target="_blank" rel="noopener noreferrer">Merriam-Webster</a></dd>
+            </dl>
+        </section>
+    </main>
+
+    <div class="additional-div-2"></div>
+    
+    <footer>
+        <small>freeCodeCamp JavaScript Algorithms and Data Structures &mdash; Project 1</small>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
