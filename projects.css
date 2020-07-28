@@ -107,8 +107,12 @@ footer {
     grid-row: 2 / 3;
 }
 .section2 p {
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     font-weight: 700;
+}
+.palindrome-to-check, #converted-numeral {
+    color: #a8a58a;
+    /* font-weight: 700; */
 }
 .section3 {
     color: #d4d0ab;
@@ -122,9 +126,17 @@ footer {
 .section3 dt {
     font-weight: 700;
 }
+.section3 dd {
+    color: #3b3f45;
+}
+.section3 ul {
+    list-style: none;
+    padding-left: 1em;
+    margin: 1em 0;
+}
 .overlaying-is {
     position: relative;
-    left: 2.3em;
+    left: 2em;
 }
 .disappear {
     display: none;

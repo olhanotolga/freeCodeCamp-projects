@@ -4,7 +4,7 @@ const notSpan = document.querySelector(".not");
 const displayPhrase = document.querySelector(".palindrome-to-check");
 isSpan.classList.add("overlaying-is");
 
-function palindrome(str = inputField.value) {
+const palindrome = (str = inputField.value) => {
     isSpan.classList.remove("overlaying-is");
     
     // use split, reverse, join
