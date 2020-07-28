@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter</title>
+    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Roman Numeral Converter</h1>
+        <h2>Version MMXX</h2>
+    </header>
+
+    <div class="additional-div-1"></div>
+    
+    <main>
+        <section class="section1">
+            <label for="number-input">Type or insert your number here:</label>
+            <input type="number" name="number" id="number-input">
+            <button type="button" onclick="convertToRoman(inputField.value)">Convert!</button>
+        </section>
+        <section class="section2">
+            <p>Here is your number as Romans would've written it: <span class="converted-numeral"></span></p>
+        </section>
+        <section class="section3">
+            <dl>
+                <dt>Classic Roman numerals</dt>
+                <dd>Some description</dd>
+                <dd>&mdash;<a href="#" target="_blank" rel="noopener noreferrer">Roman Numerals on Wikipedia</a></dd>
+            </dl>
+        </section>
+    </main>
+
+    <div class="additional-div-2"></div>
+    
+    <footer>
+        <small>freeCodeCamp JavaScript Algorithms and Data Structures &mdash; Project 2</small>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
