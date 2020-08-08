@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar's Cipher</title>
+    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Caesar's Cipher</h1>
+        <h2>ROT13 decoder</h2>
+    </header>
+
+    <div class="additional-div-1"></div>
+    
+    <main>
+        <section class="section1">
+            <label for="encodedPhraseInput">Type or insert your phrase here:</label>
+            <input type="text" name="encodedPhrase" id="encodedPhraseInput">
+            <button type="button" onclick="convertRot13(inputField.value)">Decode!</button>
+        </section>
+        <section class="section2">
+            <p>Your phrase decoded:</p>
+            <p id="decodedRot13Phrase"></p>
+        </section>
+        <section class="section3">
+            <dl>
+                <dt>ROT13 ("rotate by 13 places"):</dt>
+                <dd>A simple letter substitution cipher that replaces a letter with the 13th letter after it, in the alphabet. For example, HELLO becomes URYYB (or, conversely, URYYB becomes HELLO again).</dd>
+                <ul>
+                    <li>A &leftrightarrow; N</li>
+                    <li>B &leftrightarrow; O</li>
+                    <li>C &leftrightarrow; P</li>
+                    <li>D &leftrightarrow; Q</li>
+                    <li>E &leftrightarrow; R</li>
+                    <li>F &leftrightarrow; S</li>
+                    <li>G &leftrightarrow; T</li>
+                    <li>H &leftrightarrow; U</li>
+                    <li>I &leftrightarrow; V</li>
+                    <li>J &leftrightarrow; W</li>
+                    <li>K &leftrightarrow; X</li>
+                    <li>L &leftrightarrow; Y</li>
+                    <li>M &leftrightarrow; Z</li>
+                </ul>
+                <dd>It is a special case of the Caesar cipher which was developed in ancient Rome.</dd>
+                <dd>&mdash;<a href="https://en.wikipedia.org/wiki/ROT13" target="_blank" rel="noopener noreferrer">ROT13 on Wikipedia</a></dd>
+            </dl>
+        </section>
+    </main>
+
+    <div class="additional-div-2"></div>
+    
+    <footer>
+        <small>freeCodeCamp JavaScript Algorithms and Data Structures &mdash; Project 3</small>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
