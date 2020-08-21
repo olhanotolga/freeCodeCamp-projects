@@ -10,7 +10,6 @@ body {
     background-color: #3b3f45;
     font-size: 130%;
 }
-
 body::before, body::after {
     content: "";
     background-color: white;

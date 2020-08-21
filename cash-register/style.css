@@ -1,0 +1,45 @@
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 3em;
+}
+.cash-reg-section {
+    flex-basis: 100%;
+    border: 2px solid orangered;
+    margin: 0;
+}
+
+.display {
+    padding: 1rem;
+}
+
+.price, .cash {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 1rem;
+}
+
+.drawer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.drawer-unit {
+    flex-basis: calc(33.33% - 2rem);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.drawer-unit > button {
+    flex-basis: 50%;
+}
+.drawer-unit > label,
+.drawer-unit > input{
+    flex-basis: 100%;
+    text-align: center;
+}
+.drawer-unit > input {
+    height: 5rem;
+}
+
