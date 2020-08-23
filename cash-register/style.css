@@ -13,9 +13,16 @@
     display: flex;
 }
 
+.top {
+    justify-content: space-between;
+}
 .display {
     padding: 1rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+}
+.calculate-change {
+    max-width: 25%;
+    /* justify-self: flex-end; */
 }
 
 .price, .cash {
@@ -27,6 +34,12 @@
 
 .drawer {
     flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+.drawer-explainer {
+    text-align: center;
+    padding: 2rem 0rem 1rem;
+    flex-basis: 100%;
 }
 .drawer-unit {
     flex-basis: calc(33.33% - 2rem);
@@ -45,4 +58,16 @@
 .drawer-unit > input {
     height: 5rem;
 }
-
+.unit-title {
+    background-color: #D4D0AB;
+    color: #3B3F45;
+    border: 1px solid #3B3F45;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.unit-input {
+    border: none;
+    border: 1px solid #3B3F45;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}

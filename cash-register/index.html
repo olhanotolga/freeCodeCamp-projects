@@ -16,10 +16,10 @@
     <main class="main">
         <section class="cash-reg-section top">
             <div class="display">
-                <p>Status: <span id="display-status" class="display-output"></span></p>
                 <p>Change: <span id="display-change" class="display-output"></span></p>
+                <p>Status: <span id="display-status" class="display-output"></span></p>
             </div>
-            <button class="calculate-change" onclick="checkCashRegister(priceInput, cashInput, cidInput)">Calculate change</button>
+            <button class="calculate-change" onclick="cashRegisterFunction()">Calculate change</button>
         </section>
 
         <section class="cash-reg-section price">
@@ -33,59 +33,60 @@
         </section>
 
         <section class="cash-reg-section drawer">
+            <p class="drawer-explainer">Specify the number of corresponding currency units in the drawer:</p>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="hundred">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="hundred" class="unit-title">Hundred</label>
+                <input type="number" id="hundred" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="twenty">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="twenty" class="unit-title">Twenty</label>
+                <input type="number" id="twenty" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="ten">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="ten" class="unit-title">Ten</label>
+                <input type="number" id="ten" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="five">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="five" class="unit-title">Five</label>
+                <input type="number" id="five" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="one">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="one" class="unit-title">One</label>
+                <input type="number" id="one" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="quarter">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="quarter" class="unit-title">Quarter</label>
+                <input type="number" id="quarter" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="dime">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="dime" class="unit-title">Dime</label>
+                <input type="number" id="dime" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="nickel">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="nickel" class="unit-title">Nickel</label>
+                <input type="number" id="nickel" class="unit-input">
             </div>
             <div class="drawer-unit">
-                <button>&plus;</button>
-                <button>&minus;</button>
-                <input type="number" id="penny">
+                <!-- <button>&plus;</button>
+                <button>&minus;</button> -->
                 <label for="penny" class="unit-title">Penny</label>
+                <input type="number" id="penny" class="unit-input">
             </div>
         </section>
     </main>

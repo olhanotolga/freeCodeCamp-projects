@@ -15,74 +15,70 @@ const dimeElement = document.getElementById("dime");
 const nickelElement = document.getElementById("nickel");
 const pennyElement = document.getElementById("penny");
 
-let priceInput = Number(priceElement.value);
-let cashInput = Number(cashElement.value);
-
-let pennyInput = pennyElement.value ? Number(pennyElement.value) : 0;
-let nickelInput = nickelElement.value ? Number(nickelElement.value) : 0;
-let dimeInput = dimeElement.value ? Number(dimeElement.value) : 0;
-let quarterInput = quarterElement.value ? Number(quarterElement.value) : 0;
-let oneInput = oneElement.value ? Number(oneElement.value) : 0;
-let fiveInput = oneElement.value ? Number(oneElement.value) : 0;
-let tenInput = tenElement.value ? Number(tenElement.value) : 0;
-let twentyInput = twentyElement.value ? Number(twentyElement.value) : 0;
-let hundredInput = hundredElement.value ? Number(hundredElement.value) : 0;
-
-
-let cidInput = [
-    ["PENNY", pennyInput],
-    ["NICKEL", nickelInput],
-    ["DIME", dimeInput],
-    ["QUARTER", quarterInput],
-    ["ONE", oneInput],
-    ["FIVE", fiveInput],
-    ["TEN", tenInput],
-    ["TWENTY", twentyInput],
-    ["ONE HUNDRED", hundredInput]
-];
-
 const statusDisplay = document.getElementById("display-status");
 const changeDisplay = document.getElementById("display-change");
 
-// key to available denominations:
-const currencyMap = [
-    ["PENNY", 0.01],
-    ["NICKEL", 0.05],
-    ["DIME", 0.1],
-    ["QUARTER", 0.25],
-    ["ONE", 1],
-    ["FIVE", 5],
-    ["TEN", 10],
-    ["TWENTY", 20],
-    ["ONE HUNDRED", 100]
-];
 
+/*****************/
+/* EVENT HANDLER */
+/*****************/
+
+function cashRegisterFunction() {
+    
+    let priceInput = Number(priceElement.value);
+    let cashInput = Number(cashElement.value);
+
+    let pennyInput = pennyElement.value ? Number(pennyElement.value) : 0;
+    let nickelInput = nickelElement.value ? Number(nickelElement.value) : 0;
+    let dimeInput = dimeElement.value ? Number(dimeElement.value) : 0;
+    let quarterInput = quarterElement.value ? Number(quarterElement.value) : 0;
+    let oneInput = oneElement.value ? Number(oneElement.value) : 0;
+    let fiveInput = oneElement.value ? Number(oneElement.value) : 0;
+    let tenInput = tenElement.value ? Number(tenElement.value) : 0;
+    let twentyInput = twentyElement.value ? Number(twentyElement.value) : 0;
+    let hundredInput = hundredElement.value ? Number(hundredElement.value) : 0;
+
+    let cidInput = [
+        ["PENNY", pennyInput],
+        ["NICKEL", nickelInput],
+        ["DIME", dimeInput],
+        ["QUARTER", quarterInput],
+        ["ONE", oneInput],
+        ["FIVE", fiveInput],
+        ["TEN", tenInput],
+        ["TWENTY", twentyInput],
+        ["ONE HUNDRED", hundredInput]
+    ];
+
+    checkCashRegister(priceInput, cashInput, cidInput);
+
+}
 
 function checkCashRegister(price, cash, cid) {
-    price = priceInput;
-    cash = cashInput;
-    cid = cidInput;
-
+    
 	// GLOBAL VARIABLES:
 
+    // key to available denominations:
+    const currencyMap = [
+        ["PENNY", 0.01],
+        ["NICKEL", 0.05],
+        ["DIME", 0.1],
+        ["QUARTER", 0.25],
+        ["ONE", 1],
+        ["FIVE", 5],
+        ["TEN", 10],
+        ["TWENTY", 20],
+        ["ONE HUNDRED", 100]
+    ];
+
     // key to available denominations (in cents):
+    // (I'm converting units into cents so that I work with integers and not floats)
     const currencyMapInCents = [];
     for (let i = 0; i < currencyMap.length; i++) {
         const subArray = [currencyMap[i][0], Math.round(currencyMap[i][1] * 100)];
         currencyMapInCents.push(subArray);
     }
     console.log("currencyMapInCents: " + currencyMapInCents);
-    // const currencyMapInCents = [
-    //     ["PENNY", 1],
-    //     ["NICKEL", 5],
-    //     ["DIME", 10],
-    //     ["QUARTER", 25],
-    //     ["ONE", 100],
-    //     ["FIVE", 500],
-    //     ["TEN", 1000],
-    //     ["TWENTY", 2000],
-    //     ["ONE HUNDRED", 10000]
-    // ];
 
     // object that is going to be updated and returned in the end:
     const drawerAfterPurchase = {};
@@ -115,14 +111,14 @@ function checkCashRegister(price, cash, cid) {
         // the following variable is used to check if change can be given in the current unit:
         let canGiveChange = curUnitValue <= currentChange;
 
-        if (canGiveChange) {
+        if (canGiveChange && availableSumInCurUnit) {
 
 	    	// if available sum in the current currency unit is smaller or equal to the change due, the entire sum is issued, and the change due is reduced by this exact sum
             if (availableSumInCurUnit <= currentChange) {
 
             let moneyGivenInCurrentUnit = availableSumInCurUnit;
             // change (sum) in the current unit is pushed into drawerAfterPurchase.change array
-            drawerAfterPurchase.change.push([curUnitName, moneyGivenInCurrentUnit / 100]);
+            drawerAfterPurchase.change.push([curUnitName, moneyGivenInCurrentUnit / curUnitValue]);
 
             // the total sum in drawer is redefined and passed into the next iteration
             cashInCid = cashInCid - moneyGivenInCurrentUnit;
@@ -136,7 +132,7 @@ function checkCashRegister(price, cash, cid) {
 
             // change (sum) in the current unit is pushed into drawerAfterPurchase.change array
             let moneyGivenInCurrentUnit = currentChange - remainder;
-            drawerAfterPurchase.change.push([curUnitName, moneyGivenInCurrentUnit / 100]);
+            drawerAfterPurchase.change.push([curUnitName, moneyGivenInCurrentUnit / curUnitValue]);
 
             // changeInCents is redefined and passed into the next iteration
             currentChange = remainder;
@@ -170,8 +166,7 @@ function checkCashRegister(price, cash, cid) {
             }
 
             /* display the result */
-            statusDisplay.textContent = drawerAfterPurchase.status;
-            changeDisplay.textContent = drawerAfterPurchase.change;
+            displayStatusAndChange();
 
             return drawerAfterPurchase;
 
@@ -180,11 +175,19 @@ function checkCashRegister(price, cash, cid) {
             drawerAfterPurchase.change = [];
 
             /* display the result */
-            statusDisplay.textContent = drawerAfterPurchase.status;
-            changeDisplay.textContent = drawerAfterPurchase.change;
+            displayStatusAndChange();
 
             return drawerAfterPurchase;
         }
+    }
+
+    function displayStatusAndChange() {
+        statusDisplay.textContent = drawerAfterPurchase.status;
+
+        let changeString = drawerAfterPurchase.change.reduce((acc, curr) => {
+            return acc.concat(curr[0], ": ", curr[1], "; ");
+        }, "");
+        changeDisplay.textContent = changeString;
     }
 
     return setDrawerStatus(changeInCents, cashInCid);
