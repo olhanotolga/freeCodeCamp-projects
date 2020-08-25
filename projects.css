@@ -41,12 +41,14 @@ main {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: auto auto 1fr;
     padding: 0 3em;
     background-color: white;
     color: #c5eff7;
     color: #81cfe0;
     color: #d4d0ab;
+}
+.main-project-container {
+    grid-template-rows: auto auto 1fr;
 }
 section {
     margin: 1.5em 0;

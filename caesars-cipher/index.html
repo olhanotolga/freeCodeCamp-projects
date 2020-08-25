@@ -10,17 +10,17 @@
 <body>
     <header>
         <h1>Caesar's Cipher</h1>
-        <h2>ROT13 decoder</h2>
+        <h2>ROT13 en- and decoder</h2>
     </header>
     
-    <main>
+    <main class="main-project-container">
         <section class="section1">
             <label for="encodedPhraseInput">Type or insert your phrase here:</label>
             <input type="text" name="encodedPhrase" id="encodedPhraseInput">
             <button type="button" onclick="convertRot13(inputField.value)">Decode!</button>
         </section>
         <section class="section2">
-            <p>Your phrase decoded:</p>
+            <p>Your phrase en-/decoded:</p>
             <p id="decodedRot13Phrase"></p>
         </section>
         <section class="section3">
