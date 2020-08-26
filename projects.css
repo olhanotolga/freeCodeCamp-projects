@@ -53,9 +53,6 @@ main {
 section {
     margin: 1.5em 0;
 }
-input, button {
-    outline: none;
-}
 button {
     /* background-color: #d89838; */
     background-color: white;
