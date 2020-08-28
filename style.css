@@ -1,3 +1,16 @@
+:root {
+    --dark: #3B3F45;
+    --grey: #CCCCCC;
+    /* --red: #FC8B94; */
+    --orangered: #FDAAA5;
+    --orange: #FED3B6;
+    --yellow: #DCEDC1;
+    --green: #A8E6CF;
+    --seablue: #92CFFF;
+    --violet: #B4A6F7;
+    /* --purple: #D39ECD; */
+}
+
 .projects-container {
     grid-template-rows: auto;
     align-items: center;
@@ -9,21 +22,68 @@
     /* justify-content: center; */
     padding: 0;
 }
-.navigation li {
+.project-card {
     background-color: #3B3F45;
     padding: 2rem 1rem;
-    border: 2px solid #81cfe0;
+    /* border: 2px solid #81cfe0; */
+    border: 2px solid var(--dark, #3B3F45);
     margin: 0.2rem;
-    height: 8rem;
+    /* height: 10rem; */
+    /* display: flex;
+    flex-direction: column; */
 }
 .navigation a {
+    display: inline-block;
     text-decoration: none;
     font-weight: 300;
     text-transform: uppercase;
     font-size: 1.2rem;
+    background-color: var(--dark);
+    color: var(--dark);
+    padding: 0.5ch 1ch;
 }
 
 .fas {
     display: block;
     margin-bottom: 0.5rem;
+    color: var(--grey);
+}
+
+.palindrome-checker {
+    border: 3px solid var(--orange);
+}
+.palindrome-checker a {
+    background-color: var(--orange);
+}
+
+.roman-numeral {
+    border: 3px solid var(--yellow);
+}
+.roman-numeral a {
+    background-color: var(--yellow);
+    /* color: var(--yellow); */
+}
+
+.caesars-cipher {
+    border: 3px solid var(--green);
+}
+.caesars-cipher a {
+    background-color: var(--green);
+    /* color: var(--green); */
+}
+
+.phone-validator {
+    border: 3px solid var(--seablue);
+}
+.phone-validator a {
+    background-color: var(--seablue);
+    /* color: var(--seablue); */
+}
+
+.cash-register {
+    border: 3px solid var(--violet);
+}
+.cash-register a {
+    background-color: var(--violet);
+    /* color: var(--violet); */
 }
