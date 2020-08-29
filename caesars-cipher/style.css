@@ -1,0 +1,79 @@
+:root {
+    /* --dark: #3B3F45; */
+    --dark: #2c2d2f;
+    --grey: #CCCCCC;
+    --white: #faf8f8;
+    /* --red: #FC8B94; */
+    --orangered: #FDAAA5;
+    --orange: #FED3B6;
+    --yellow: #DCEDC1;
+    --green: #A8E6CF;
+    --seablue: #92CFFF;
+    --violet: #B4A6F7;
+    /* --purple: #D39ECD; */
+}
+
+h2 {
+    color: var(--green);
+}
+
+a {
+    color: var(--dark);
+    text-shadow: 1px 1px 1px var(--green);
+    font-weight: 600;
+}
+
+.section1 button {
+    background-color: var(--yellow);
+    border: 2px outset var(--yellow);
+    background-color: #d4d0ab;
+    border: 2px outset #a8a58a;
+}
+button:active {
+    border: 2px inset #a8a58a;
+}
+
+.section2 {
+    padding: 0.5rem 1rem 0.7rem;
+    color: var(--green);
+    color: #d4d0ab;
+    background-color: var(--dark);
+}
+#decodedRot13Phrase {
+    color: #d4d0ab;
+    color: var(--green);
+}
+
+.section3 {
+    background-color: var(--grey);
+    background-color: var(--white);
+    padding: 0.5rem 1rem 0.7rem;
+    border: 2px solid var(--grey);
+}
+.section3 dt {
+    /* display: inline-block; */
+    background-color: var(--orange);
+    background-color: var(--dark);
+    color: var(--dark);
+    color: var(--green);
+    /* padding: 0.5rem 1rem 0.7rem; */
+    padding: 0.5rem;
+    /* border: 2px solid var(--orange); */
+}
+.section3 dd {
+    margin: 1rem auto;
+}
+
+.rot-keys-list {
+    background-color: var(--green);
+    /* background-color: var(--white); */
+    background-color: var(--dark);
+    padding: 1rem 0;
+    color: var(--green);
+    /* color: var(--dark); */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+    display: flex;
+    flex-flow: column wrap;
+    height: 10rem;
+}
