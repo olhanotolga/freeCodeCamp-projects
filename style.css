@@ -11,7 +11,9 @@
     --violet: #B4A6F7;
     /* --purple: #D39ECD; */
 }
-
+h1 {
+    color: var(--grey);
+}
 .projects-container {
     grid-template-rows: auto;
     align-items: center;
