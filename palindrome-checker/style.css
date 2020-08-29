@@ -1,0 +1,65 @@
+:root {
+    /* --dark: #3B3F45; */
+    --dark: #2c2d2f;
+    --grey: #CCCCCC;
+    --white: #faf8f8;
+    /* --red: #FC8B94; */
+    --orangered: #FDAAA5;
+    --orange: #FED3B6;
+    --yellow: #DCEDC1;
+    --green: #A8E6CF;
+    --seablue: #92CFFF;
+    --violet: #B4A6F7;
+    /* --purple: #D39ECD; */
+}
+
+h1 {
+    color: #d4d0ab;
+}
+h2 {
+    color: var(--orange);
+}
+
+a {
+    color: var(--dark);
+    text-shadow: 1px 1px 1px var(--orangered);
+    font-weight: 600;
+}
+
+.section1 button {
+    background-color: var(--orange);
+    border: 2px outset var(--orange);
+    background-color: #d4d0ab;
+    border: 2px outset #a8a58a;
+}
+button:active {
+    border: 2px inset #a8a58a;
+}
+
+.section2 {
+    padding: 0.5rem 1rem 0.7rem;
+    color: var(--orangered);
+    background-color: var(--dark);
+}
+.palindrome-to-check {
+    color: #d4d0ab;
+}
+
+.section3 {
+    background-color: var(--grey);
+    padding: 0.5rem 1rem 0.7rem;
+    /* border: 2px solid var(--orange); */
+}
+.section3 dt {
+    /* display: inline-block; */
+    background-color: var(--orange);
+    background-color: var(--dark);
+    color: var(--dark);
+    color: var(--orange);
+    /* padding: 0.5rem 1rem 0.7rem; */
+    padding: 0.5rem;
+    /* border: 2px solid var(--orange); */
+}
+.section3 dd {
+    margin: 1rem auto;
+}
