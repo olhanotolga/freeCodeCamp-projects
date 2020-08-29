@@ -2,5 +2,6 @@
 
 To do:
 
-* [ ] Change colors
+* [x] Change colors
+* [ ] Refactor CSS
 * [ ] Change the pattern to validate German numbers (or add a switch)

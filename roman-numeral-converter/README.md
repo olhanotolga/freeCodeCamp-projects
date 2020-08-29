@@ -2,5 +2,6 @@
 
 To do:
 
-* [ ] Change colors
+* [x] Change colors
+* [ ] Refactor CSS files
 * [ ] Add extended version
