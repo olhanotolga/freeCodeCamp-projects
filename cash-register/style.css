@@ -1,3 +1,19 @@
+:root {
+    /* --dark: #3B3F45; */
+    --dark: #2c2d2f;
+    --grey: #CCCCCC;
+    --white: #faf8f8;
+    --lightgold: #d4d0ab;
+    --darkgold: #a8a58a;
+    /* --red: #FC8B94; */
+    --orangered: #FDAAA5;
+    --orange: #FED3B6;
+    --yellow: #DCEDC1;
+    --green: #A8E6CF;
+    --seablue: #92CFFF;
+    --violet: #B4A6F7;
+    /* --purple: #D39ECD; */
+}
 
 .main {
     display: flex;
@@ -5,11 +21,27 @@
     padding: 2rem 3em;
     
 }
+h1 {
+    color: var(--grey);
+}
+h2 {
+    color: var(--violet);
+}
+
+.display p, .price label, .cash label, .drawer p {
+    color: var(--grey);
+    color: var(--dark);
+}
+
 .cash-reg-section {
     flex-basis: 100%;
-    border: 2px solid orangered;
+    border: 2px solid var(--violet);
+    border: 2px solid var(--darkgold);
+    border: 2px solid var(--grey);
+    border: 2px solid var(--dark);
     margin: 0;
-    background-color: rgb(37, 11, 2);
+    background-color: var(--dark);
+    background-color: var(--grey);
     display: flex;
 }
 
@@ -19,6 +51,12 @@
 .display {
     padding: 1rem;
     /* flex-grow: 1; */
+}
+#display-change, #display-status {
+    color: var(--lightgold);
+    color: var(--darkgold);
+    background-color: var(--dark);
+    color: var(--darkgold);
 }
 .calculate-change {
     max-width: 25%;
@@ -59,15 +97,16 @@
     height: 5rem;
 }
 .unit-title {
-    background-color: #D4D0AB;
-    color: #3B3F45;
-    border: 1px solid #3B3F45;
+    background-color: var(--lightgold, #D4D0AB);
+    background-color: var(--violet);
+    color: var(--dark, #3B3F45);
+    border: 1px solid var(--dark, #3B3F45);
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
 }
 .unit-input {
     border: none;
-    border: 1px solid #3B3F45;
+    border: 1px solid var(--dark, #3B3F45);
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
