@@ -60,3 +60,9 @@ button:active {
 .section3 dd {
     margin: 1rem auto;
 }
+
+footer a {
+    color: var(--orange);
+    text-shadow: unset;
+    font-weight: 400;
+}

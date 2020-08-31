@@ -14,12 +14,13 @@
     --violet: #B4A6F7;
     /* --purple: #D39ECD; */
 }
-
+body {
+    overflow: scroll;
+}
 .main {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem 3em;
-    
 }
 h1 {
     color: var(--grey);
@@ -110,3 +111,4 @@ h2 {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
+

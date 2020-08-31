@@ -77,3 +77,9 @@ button:active {
     flex-flow: column wrap;
     height: 10rem;
 }
+
+footer a {
+    color: var(--green);
+    text-shadow: unset;
+    font-weight: 400;
+}

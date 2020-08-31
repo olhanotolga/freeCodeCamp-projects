@@ -68,3 +68,9 @@ button:active {
     padding: 1rem 0;
     color: var(--dark);
 }
+
+footer a {
+    color: var(--yellow);
+    text-shadow: unset;
+    font-weight: 400;
+}

@@ -21,7 +21,7 @@ h2 {
 
 a {
     color: var(--dark);
-    text-shadow: 1px 1px 1px var(--green);
+    text-shadow: 1px 1px 1px var(--seablue);
     font-weight: 600;
 }
 
@@ -87,4 +87,10 @@ button:active {
     text-decoration: underline rgb(255, 94, 0) double;
     text-decoration: underline var(--orangered) double;
     color: var(--orangered);
+}
+
+footer a {
+    color: var(--seablue);
+    text-shadow: unset;
+    font-weight: 400;
 }
