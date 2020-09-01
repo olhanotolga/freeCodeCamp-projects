@@ -35,6 +35,10 @@ h2 {
     color: var(--grey);
     color: var(--dark);
 }
+input {
+    font-size: 1rem;
+    color: var(--dark);
+}
 
 .cash-reg-section {
     /* border: 2px solid var(--violet);
@@ -64,7 +68,6 @@ h2 {
     color: var(--darkgold);
 }
 .calculate-change {
-    max-width: 70%;
     margin: 0 auto 1rem;
     padding: 0.5rem;
 }
@@ -92,7 +95,7 @@ h2 {
     display: grid;
     grid-template: repeat(4, auto) / repeat(3, minmax(50px, 1fr));
     gap: 0.2rem;
-    padding: 1rem 0.2rem;
+    padding: 1rem 0.2rem 3rem;
 }
 .drawer-explainer {
     text-align: center;
@@ -102,6 +105,8 @@ h2 {
 .drawer-unit {
     display: flex;
     flex-wrap: wrap;
+    border: 1px solid var(--dark, #3B3F45);
+    border-radius: 3px;
 }
 .unit-input,
 .unit-title {
@@ -111,17 +116,15 @@ h2 {
 .unit-title {
     background-color: var(--lightgold, #D4D0AB);
     background-color: var(--violet);
+    padding: 0.3rem;
+    border-bottom: 1px solid var(--dark, #3B3F45);
     color: var(--dark, #3B3F45);
-    border: 1px solid var(--dark, #3B3F45);
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
     font-size: 1rem;
 }
 .unit-input {
     width: 50px;
     height: 3rem;
     border: none;
-    border: 1px solid var(--dark, #3B3F45);
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
@@ -138,7 +141,6 @@ h2 {
         justify-content: space-between;
     }
     .calculate-change {
-        max-width: 30%;
         margin: auto 1rem auto auto;
         padding: 1rem;
     }
