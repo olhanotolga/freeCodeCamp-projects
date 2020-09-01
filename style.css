@@ -15,86 +15,87 @@ h1 {
     color: var(--grey);
 }
 .projects-container {
-    grid-template-rows: auto;
     align-items: center;
+    padding: 0;
 }
 .navigation ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    /* justify-content: center; */
-    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 30rem));
+    justify-content: space-evenly;
+    padding: 2rem 1rem;
 }
 .project-card {
     background-color: #3B3F45;
     background-color: var(--grey);
     background-color: var(--dark);
-    padding: 2rem 1rem;
-    /* border: 2px solid #81cfe0; */
-    border: 3px solid var(--dark, #3B3F45);
+    padding: 1.5rem 1rem;
+    /* border: 3px solid var(--dark, #3B3F45); */
+    border-radius: 3px;
     margin: 0.2rem;
-    /* height: 10rem; */
     display: flex;
     flex-direction: column;
+    font-size: 1.2rem;
 }
-.navigation a {
-    /* display: block; */
-    text-decoration: none;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 400;
-    background-color: var(--dark);
-    color: var(--dark);
-    padding: 0.5ch 1ch;
-    /* border: 3px solid var(--dark); */
+.project-card a {
+    display: inline-block;
+    height: 3.5rem;
     margin: auto 0;
+    background-color: var(--dark);
+    padding: 0.5ch 1ch;
+    border-radius: 3px;
+    color: var(--dark);
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .fas {
-    display: block;
+    display: inline-block;
+    align-self: start;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    border: 3px solid var(--grey);
+    border-radius: 3px;
+    padding: 0.3rem;
+    /* font-size: 1.3rem; */
     color: var(--grey);
-    /* color: var(--dark) */
+    /* color: var(--dark); */
 }
 
-.palindrome-checker .fas {
-    /* border: 3px solid var(--orange); */
-    /* color: var(--orange); */
-}
+/* INDIVIDUAL CARDS */
+
 .palindrome-checker a {
     background-color: var(--orange);
 }
-
-.roman-numeral {
-    /* border: 3px solid var(--yellow); */
+.palindrome-checker .fas {
+    border: 3px solid var(--orange);
+    /* background-color: var(--orange); */
 }
 .roman-numeral a {
     background-color: var(--yellow);
-    /* color: var(--yellow); */
 }
-
-.caesars-cipher {
-    /* border: 3px solid var(--green); */
+.roman-numeral .fas {
+    border: 3px solid var(--yellow);
+    /* background-color: var(--yellow); */
 }
 .caesars-cipher a {
     background-color: var(--green);
-    /* color: var(--green); */
 }
-
-.phone-validator {
-    /* border: 3px solid var(--seablue); */
+.caesars-cipher .fas {
+    border: 3px solid var(--green);
+    /* background-color: var(--green); */
 }
 .phone-validator a {
     background-color: var(--seablue);
-    /* color: var(--seablue); */
 }
-
-.cash-register {
-    /* border: 3px solid var(--violet); */
+.phone-validator .fas {
+    border: 3px solid var(--seablue);
+    /* background-color: var(--seablue); */
 }
 .cash-register a {
     background-color: var(--violet);
-    /* color: var(--violet); */
+}
+.cash-register .fas {
+    border: 3px solid var(--violet);
+    /* background-color: var(--violet); */
 }
