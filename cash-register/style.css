@@ -40,6 +40,43 @@ input {
     color: var(--dark);
 }
 
+/* INSTRUCTIONS */
+
+.instructions-container {
+	grid-column: span 2;
+}
+.instructions-summary {
+	padding: 0.3rem;
+	color: var(--violet);
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.instructions {
+	background-color: var(--white);
+	border: 3px solid var(--violet);
+	padding: 1rem;
+	color: #555;
+	font-weight: 400;
+	font-size: 90%;
+	line-height: 1.5;
+}
+.instructions p, .instructions-list {
+	padding: 0.5rem;
+}
+.instructions-list {
+	list-style-position: inside;
+	padding-left: 2rem;
+}
+.instructions-list li::before {
+	content: "";
+	padding-right: 2ch;
+}
+.instructions-list span {
+	font-weight: 700;
+	border-bottom: 3px solid var(--violet);
+}
+/* CASH REGISTER */
+
 .cash-reg-section {
     /* border: 2px solid var(--violet);
     border: 2px solid var(--darkgold);
@@ -55,17 +92,23 @@ input {
 .top {
     grid-column: span 2;
     display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	background-color: var(--dark);
 }
 .display {
-    padding: 1rem;
+	padding: 1rem;
+}
+.display p {
+	color: var(--lightgold);
 }
 #display-change,
 #display-status {
     color: var(--lightgold);
     color: var(--darkgold);
     background-color: var(--dark);
-    color: var(--darkgold);
+	color: var(--darkgold);
+	color: var(--violet);
+	padding: 0rem 0.5rem;
 }
 .calculate-change {
     margin: 0 auto 1rem;

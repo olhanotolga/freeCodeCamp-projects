@@ -33,7 +33,7 @@ function cashRegisterFunction() {
     let dimeInput = dimeElement.value ? Number(dimeElement.value) : 0;
     let quarterInput = quarterElement.value ? Number(quarterElement.value) : 0;
     let oneInput = oneElement.value ? Number(oneElement.value) : 0;
-    let fiveInput = oneElement.value ? Number(oneElement.value) : 0;
+    let fiveInput = fiveElement.value ? Number(fiveElement.value) : 0;
     let tenInput = tenElement.value ? Number(tenElement.value) : 0;
     let twentyInput = twentyElement.value ? Number(twentyElement.value) : 0;
     let hundredInput = hundredElement.value ? Number(hundredElement.value) : 0;
