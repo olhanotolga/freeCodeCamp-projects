@@ -10,30 +10,19 @@
 <body>
     <header>
         <h1>Phone Number Validator</h1>
-        <h2>Checks if the input is a valid US phone number.</h2>
+        <h2>Checks if the input looks like a valid German phone number.</h2>
     </header>
     
     <main class="main-project-container">
         <section class="section1">
             <label for="phone-input">Type or insert your phone number here:</label>
             <input type="text" name="phone-number" id="phone-input">
-            <button type="button" onclick="telephoneCheck(inputField.value)">Check it!</button>
+            <button type="button" onclick="deTelephoneCheck(inputField.value)">Check it!</button>
         </section>
         <section class="section2">
-            <p id="output-message" class="disappear"><span id="phone-number-to-check"></span> is <span class="not">not</span> a valid US phone number.</p>
+            <p id="output-message" class="disappear"><span id="phone-number-to-check"></span> looks <span class="not">not</span> like a valid German phone number.</p>
         </section>
         <section class="section3">
-            <p>Examples of valid US phone numbers:</p>
-            <ul class="valid-examples-list">
-                <li>555-555-5555</li>
-                <li>(555)555-5555</li>
-                <li>(555) 555-5555</li>
-                <li>555 555 5555</li>
-                <li>5555555555</li>
-                <li>1 555 555 5555</li>
-                <li>1 (555) 555-5555</li>
-                <li>1(555)555-5555</li>
-			</ul>
 			<p>Examples of valid German phone numbers:</p>
             <ul class="valid-examples-list">
 				<li>030 12345678</li>
