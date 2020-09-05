@@ -78,10 +78,6 @@ input {
 /* CASH REGISTER */
 
 .cash-reg-section {
-    /* border: 2px solid var(--violet);
-    border: 2px solid var(--darkgold);
-    border: 2px solid var(--grey);
-    border: 2px solid var(--dark); */
     margin: 0;
     background-color: var(--dark);
     background-color: var(--grey);

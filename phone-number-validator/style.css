@@ -1,18 +1,15 @@
 :root {
-    /* --dark: #3B3F45; */
     --dark: #2c2d2f;
     --grey: #CCCCCC;
     --white: #faf8f8;
     --lightgold: #d4d0ab;
     --darkgold: #a8a58a;
-    /* --red: #FC8B94; */
     --orangered: #FDAAA5;
     --orange: #FED3B6;
     --yellow: #DCEDC1;
     --green: #A8E6CF;
     --seablue: #92CFFF;
     --violet: #B4A6F7;
-    /* --purple: #D39ECD; */
 }
 
 h2 {
