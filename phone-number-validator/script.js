@@ -9,7 +9,7 @@ const deTelephoneCheck = dePhoneNumberToValidate => {
     phoneNumberDisplay.textContent = "";
     notSpan.classList.remove("disappear");
 
-    const dePhonePatternRegex = /^((((((00)|\+)?(49)( |-)?)|(0))(\d{2,4}))|(\(0(\d{2,4})\)))( |-)?(\d{3})( |-)?(\d{2,3})( |-)?(\d{2})$/;
+    const dePhonePatternRegex = /^((((((00)|\+)?(49)( |-)?)|(0))([1-9]\d{1,3}))|(\(0([1-9]\d{1,3})\)))( |-)?(\d{3})( |-)?(\d{2,3})( |-)?(\d{2})$/;
 
     let isNumberValid = dePhonePatternRegex.test(dePhoneNumberToValidate);
 
