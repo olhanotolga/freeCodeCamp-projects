@@ -6,19 +6,26 @@ isSpan.classList.add("overlaying-is");
 
 const palindrome = (str = inputField.value) => {
     isSpan.classList.remove("overlaying-is");
-    
-    // use split, reverse, join
-    // reduce the string to an array of alphanumerical symbols
-    let deconstructedString = str.toLowerCase().split('').filter(symbol => symbol.match(/[0-9a-zA-Z]/));
+	
+	let isPalindrome;
 
-    // save the reduced string into a variable
-    let reducedString = deconstructedString.join('');
-    // reverse the reduced string and save the result into a variable
-    let reversedString = deconstructedString.reverse().join('');
+	const reverseTheString = () => {
+		// use split, reverse, join
+		// reduce the string to an array of alphanumerical symbols
+		let deconstructedString = str.toLowerCase().split('').filter(symbol => symbol.match(/[0-9a-zA-Z]/));
 
-    // compare the strings and save the boolean value to a variable:
-    let isPalindrome = reducedString === reversedString;
-  
+		// save the reduced string into a variable
+		let reducedString = deconstructedString.join('');
+    	// reverse the reduced string and save the result into a variable
+		let reversedString = deconstructedString.reverse().join('');
+
+		// compare the strings and save the boolean value to a variable:
+		isPalindrome = reducedString === reversedString;
+		return isPalindrome;
+	}
+
+	str != "" ? reverseTheString() : !isPalindrome;
+
     console.log(str, isPalindrome);
 
     if (isPalindrome) {
@@ -29,7 +36,7 @@ const palindrome = (str = inputField.value) => {
     }
 
     displayPhrase.textContent = `"${inputField.value}"`;
-  
+
     return isPalindrome;
 }
 
